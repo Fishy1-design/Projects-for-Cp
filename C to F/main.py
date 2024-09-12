@@ -2,5 +2,5 @@
 
 
 celsius = int(input("Enter the Temperature in Celsius :\n"))
-fahrenheit = (1.9 * celsius) + 32.
+fahrenheit = (9/5 * celsius) + 32.
 print("Temperature in Fahrenheit :", fahrenheit)
