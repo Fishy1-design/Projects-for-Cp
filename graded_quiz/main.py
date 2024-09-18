@@ -10,7 +10,7 @@ if q1 == "purple":
 else:
     print("wrong butthole!!")    
 
-    q2 = input("what is evas favorite animal?:")
+q2 = input("what is evas favorite animal?:")
 
 if q2 == "shark": 
     print("good job.")
@@ -18,15 +18,15 @@ if q2 == "shark":
 else:
     print("wrong!!")    
 
-    q3 = input("what is evas favorite food?:")
+q3 = input("what is evas favorite food?:")
 
 if q3 == "she doesint have one": 
     print("sigma.")
     score +=1 
 else:
-    print("wrong :P!!")     
+    print("wrong :P!!")    
 
-    q4 = input("what is evas favorite weather?:")
+q4 = input("what is evas favorite weather?:")    
 
 if q4 == "rainy": 
     print("GYATT.")
@@ -34,7 +34,7 @@ if q4 == "rainy":
 else:
     print("HEHE BUTTHOLE!!") 
 
-    q5 = input("what is evas favorite season?:")
+q5 = input("what is evas favorite season?:")  
 
 if q5 == "fall": 
     print("YIPPIE!!")
@@ -42,4 +42,5 @@ if q5 == "fall":
 else:
     print("WRONGGGGG!!")  
 
+print("this your your score:")
 print(score)           
