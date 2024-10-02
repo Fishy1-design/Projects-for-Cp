@@ -19,6 +19,7 @@ while True:
         add(+1)
         remove(-1)
 
-    elseif, action =="2": remove(item)
+    elif action =="2": 
+        remove(item)
     
 else: print("Have a nice day!") 
