@@ -1,8 +1,9 @@
 #SkillPractice: Find the Bug 5, Elisheva Kibbie
 
-i = 1
+def is_between(num):
 
-while i <= 10:
+     if num > 10 and num < 20:
 
-     print(i)
-     i=i+1
+          return True
+
+     return False

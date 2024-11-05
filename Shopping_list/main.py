@@ -1,5 +1,6 @@
 #proficiencyTest: Spotting list manager, Elisheva Kibbie 
 
+shopping_list = ("start,")
 
 while True:
 
@@ -10,16 +11,19 @@ while True:
                                   Enter 2 to remove item
 
                                   Enter 3 to leave the list:\n""")
-    add= +1
-    remove = -1
-    item = 1
+    
+    remove = 
 
     if action =="1":
 
-        add(+1)
-        remove(-1)
+        add("squash")
 
-    elif action =="2": 
-        remove(item)
-    
-else: print("Have a nice day!") 
+    elif action =="2":
+
+        remove("brocilli")
+
+    else:
+
+        print("Have a nice day!")
+
+        break
