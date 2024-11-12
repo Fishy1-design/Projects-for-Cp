@@ -1,5 +1,15 @@
 #ProficiencyTest: What are these numbers?
 
-print(int("what is your number?:"))
+number = int(input("what is your number?:"))
 
+print("This is it with 4 decimal places:")
+formatted = "{:.4f}".format(number)
+print(formatted)
 
+print("Precent:")
+format = "{:%}".format(number)
+print(format)
+
+print("dollar ammount:")
+form = "{:.2f}".format(number)
+print("$",form)
