@@ -2,6 +2,10 @@
 
 number = int(input("what is your number?:"))
 
+print("thousandths:")
+matted = "{:,}".format(number)
+print(matted)
+
 print("This is it with 4 decimal places:")
 formatted = "{:.4f}".format(number)
 print(formatted)
