@@ -20,7 +20,7 @@ def remove():
         print(f"The thing: '{item}' dont got it. Didja speel its rite?")
     print("Stuffs i still gotta get:", shopping_list)
 
-# Main loop that runs untill exit
+# Main loop that runs until exit
 while True:
     action = input("""polite buttler: What would you like young miss?
     Enter 1 to add item
