@@ -1,14 +1,14 @@
 # ProficiencyTest: Multiplication Table
 
 def print_multiples_of(number):
-    # Printing the multiples of the given number from 0 to 12
+    # This displaies the Multaples the number you pick (oﾟvﾟ)ノ 
     print(f"Multiples of {number}:")
     for i in range(13):
         print(f"{number} x {i} = {number * i}")
-    print()  # Blank line for readability
+    print()  # Blank line to make it eaiser to read 🙀
 
 def print_full_multiplication_table():
-    # Printing a full multiplication table (1-12)
+    # This prints a full multiplication table (1-12)
     print("Multiplication Table (1 to 12):\n")
     
     # Print the header row with numbers 1 to 12
@@ -25,11 +25,11 @@ def print_full_multiplication_table():
             print(f"{i * j:4}", end="")
         print()  # New line after each row
 
-# Main execution
+# The body or the main part of the program: ✌️
 if __name__ == "__main__":
     # Ask the user for a number and print its multiples from 0 to 12
     number = int(input("Enter a number to see its multiples from 0 to 12: "))
     print_multiples_of(number)
 
-    # Bonus: Print the full multiplication table
+    # The Bonus: Print the full multiplication table BECAUSE IM COOL! щ(ʘ╻ʘ)щ
     print_full_multiplication_table()
