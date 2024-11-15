@@ -58,19 +58,19 @@ def play_game():
                     board[row-1][col-1] = "X"
                     break
                 else:
-                    print("That spot is already taken. Try again.")
+                    print("That spot is already taken. sorry not sorry.")
             except (ValueError, IndexError):
-                print("Invalid input. Please enter row and column between 1 and 3.")
+                print("thats not between 1-3. Please enter row and column between 1 and 3.")
 
         # This Checks if user wins
         if check_winner(board, "X"):
             print_board(board)
-            print("Congratulations! You win!")
+            print("Congrats! You win!")
             break
         
         if board_full(board):
             print_board(board)
-            print("It's a draw!")
+            print("It's a Tie!")
             break
 
         # Computers turn
@@ -86,7 +86,7 @@ def play_game():
         
         if board_full(board):
             print_board(board)
-            print("It's a draw!")
+            print("It's a Tie!")
             break
 
 # This function at the bottom starts the game. 
