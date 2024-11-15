@@ -1,5 +1,6 @@
-#SkillPractice: Find the Bug 5, Elisheva Kibbie
+#SkillPractice: Find the Bug 6, Elisheva Kibbie
 
+num = input("what is your number?: ")
 def is_between(num):
 
      if num > 10 and num < 20:
@@ -7,3 +8,5 @@ def is_between(num):
           return True
 
      return False
+
+
