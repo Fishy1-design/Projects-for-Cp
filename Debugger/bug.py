@@ -1,9 +1,11 @@
-#SkillPractice: Find the Bug 5, Elisheva Kibbie
+
 
 def is_between(num):
 
      if num > 10 and num < 20:
 
           return True
+     else:
+          return False
 
-     return False
+print(is_between(20))
