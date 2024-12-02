@@ -25,3 +25,5 @@ def check_password():
         # gives the these words is the password is accepted
         print("Password accepted!")
         break
+
+check_password()
