@@ -4,10 +4,10 @@ import re
 
 def check_password():
     while True:
-        # Prompt user for password input
+        # Asks user for their password (*/ω＼*)
         password = input("Enter your password: ")
 
-        # Check if password is at least 8 characters long
+        # Check if password is long enough ᓚᘏᗢ
         if len(password) < 8:
             print("Password must be at least 8 characters long.")
             continue
@@ -22,6 +22,6 @@ def check_password():
             print("Password must contain at least one special character (@, #, $, %, *, &).")
             continue
 
-        # If all checks pass, accept the password
+        # gives the these words is the password is accepted
         print("Password accepted!")
         break
