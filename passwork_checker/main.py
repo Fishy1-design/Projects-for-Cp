@@ -4,7 +4,7 @@ import re
 
 def check_password():
     while True:
-        # Prompt user for password input
+        # Asks user for their password
         password = input("Enter your password: ")
 
         # Check if password is at least 8 characters long
