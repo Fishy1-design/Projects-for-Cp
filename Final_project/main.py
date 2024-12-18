@@ -3,7 +3,7 @@
 
 import random
 
-# Game Initialization
+# Game start
 def start_game():
     print("Welcome to the world of Eyouis!")
     player_stats = {"health": 100, "attack": 10, "defense": 5, "level": 1, "experience": 0}
@@ -35,7 +35,7 @@ def start_game():
         else:
             print("Invalid action, try again.")
 
-# Exploration
+# This is the loop for when you want to explore
 
 def explore(player_stats, inventory):
     print("You venture into the wilderness.")
