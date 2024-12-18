@@ -7,7 +7,7 @@ import random
 def start_game():
     print("Welcome to the world of Eyouis!")
     player_stats = {"health": 100, "attack": 10, "defense": 5, "level": 1, "experience": 0}
-    inventory = []
+    inventory = ["Health Potion", "Health Potion", "Health Potion"]
     quests_completed = []
     green_dragon_defeated = False
 
@@ -35,8 +35,7 @@ def start_game():
         else:
             print("Invalid action, try again.")
 
-# This is the loop for when you want to explore
-
+# Explore functionality
 def explore(player_stats, inventory):
     print("You venture into the wilderness.")
     encounter = random.choice(["Mob", "Flower", "Nothing"])
@@ -55,7 +54,6 @@ def explore(player_stats, inventory):
         print("You found nothing this time.")
 
 # Quest Menu
-
 def quest_menu(player_stats, inventory, quests_completed):
     quests = {
         "hornet's rawth": hornets_rawth,
@@ -73,7 +71,6 @@ def quest_menu(player_stats, inventory, quests_completed):
     chosen_quest = input("Choose a quest: ").strip().lower()
     if chosen_quest in quests:
         quests[chosen_quest](player_stats, inventory, quests_completed)
-
     else:
         print("Invalid quest selection.")
 
@@ -90,7 +87,6 @@ def quest_menu(player_stats, inventory, quests_completed):
     return False
 
 # Quest Functions
-
 def hornets_rawth(player_stats, inventory, quests_completed):
     print("You face the queen hornet!")
     if battle("Queen Hornet", player_stats, inventory):
@@ -113,15 +109,26 @@ def whats_on_top(player_stats, inventory, quests_completed):
         quests_completed.append("what's on top?")
 
 def nessie_quest(player_stats, inventory, quests_completed):
-    print("You encounter the giant sea monster!")
-    print("Solve the riddles or prepare to battle.")
-    player_answer = input("What is Nessie's riddle answer? ").strip().lower()
-    if player_answer == "correct answer":
-        inventory.append("Dragon Weak Spot Info")
-        print("Quest Completed: Nessie, is that you?")
-        quests_completed.append("nessie, is that you?")
-    else:
-        battle("Nessie", player_stats, inventory)
+    print("You encounter the giant sea monster Nessie!")
+    print("Nessie challenges you with riddles.")
+
+    riddles = [
+        ("What has keys but can't open locks?", "piano"),
+        ("The more you take, the more you leave behind. What am I?", "footsteps"),
+        ("What has to be broken before you can use it?", "egg")
+    ]
+
+    for riddle, answer in riddles:
+        print(f"Riddle: {riddle}")
+        player_answer = input("Your answer: ").strip().lower()
+        if player_answer != answer:
+            print("Wrong answer! Prepare to battle Nessie.")
+            battle("Nessie", player_stats, inventory)
+            return
+
+    inventory.append("Dragon Weak Spot Info")
+    print("Quest Completed: Nessie, is that you?")
+    quests_completed.append("nessie, is that you?")
 
 def side_quest_town(player_stats, inventory, quests_completed):
     print("You dive into the lake, but sirens attack!")
@@ -141,6 +148,7 @@ def side_quest_2(player_stats, inventory, quests_completed):
 def battle(enemy, player_stats, inventory):
     print(f"Battle starts: {enemy}")
     enemy_health = random.randint(30, 100)
+
     while player_stats["health"] > 0 and enemy_health > 0:
         print(f"Player Health: {player_stats['health']}, Enemy Health: {enemy_health}")
         action = input("Choose an action: Attack, Defend, Use Item: ").strip().lower()
@@ -151,13 +159,15 @@ def battle(enemy, player_stats, inventory):
             print(f"You dealt {damage} damage to the {enemy}.")
 
         elif action == "defend":
-            print("You brace for the enemy's attack.")
+            print("You brace for the enemy's attack and block the damage.")
+            continue
 
         elif action == "use item" and inventory:
             print("Inventory:", inventory)
             item = input("Choose an item to use: ").strip()
-            if item in inventory:
-                print(f"You used {item}.")
+            if item == "Health Potion" and item in inventory:
+                player_stats["health"] += 15
+                print("You used a Health Potion and restored 15 health.")
                 inventory.remove(item)
             else:
                 print("Invalid item.")
@@ -173,7 +183,11 @@ def battle(enemy, player_stats, inventory):
 
     if player_stats["health"] > 0:
         print(f"You defeated the {enemy}!")
-        player_stats["experience"] += 20
+        player_stats["experience"] += 50
+        if player_stats["experience"] >= 200:
+            player_stats["level"] += 1
+            player_stats["experience"] -= 200
+            print("Congratulations, you leveled up!")
         return True
     else:
         print("You were defeated. Retrieve your items to continue.")
