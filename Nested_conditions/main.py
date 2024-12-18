@@ -91,7 +91,7 @@ def play_quiz():
         random.shuffle(options)
         for i, option in enumerate(options):
             print(f"{i + 1}. {option}")
-
+            
         try:
             answer = int(input("Choose the number of your answer (1-6): ")) - 1 #This line asks th user to 
             if 0 <= answer < len(options):

@@ -1,4 +1,4 @@
-#Elisheva Kibbie,m Casating assignment
+#Elisheva Kibbie, Casating assignment
 
 name = input("What is you name?:")
 age = input("how old are you?:")
